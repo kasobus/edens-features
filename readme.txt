@@ -1,6 +1,6 @@
 === EDENS Features ===
-Contributors: hlashbrooke
-Donate link: http://www.hughlashbrooke.com/donate
+Contributors: Kyle Sobus
+Donate link: http://www.kylesobus.com
 Tags: wordpress, plugin, template
 Requires at least: 3.9
 Tested up to: 4.0
@@ -8,11 +8,11 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is where you craft a short, punchy description of your plugin
+EDENS Features. Bring awesome code into one spot.
 
 == Description ==
 
-This is where you can give a much longer description of your plugin that you can use to explain just how it awesome it really is.
+Still need a description…
 
 == Installation ==
 
@@ -24,17 +24,18 @@ Installing "EDENS Features" can be done either by searching for "EDENS Features"
 
 == Screenshots ==
 
-1. Description of first screenshot named screenshot-1
-2. Description of second screenshot named screenshot-2
-3. Description of third screenshot named screenshot-3
+Need these too…
 
 == Frequently Asked Questions ==
 
 = What is the plugin template for? =
-
-This plugin template is designed to help you get started with any new WordPress plugin.
+Bad-assery
 
 == Changelog ==
+
+= 1.1 =
+* 2016-05-06
+* ACF custom fields for EDENS Template. Custom post types. SVG capability & thumbnails. Center options. Custom footer widget. Kirk (still not fully implemented. Currently hidden)
 
 = 1.0 =
 * 2012-12-13

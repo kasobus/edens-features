@@ -1,4 +1,3 @@
-
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 //Add SVG Upload capability
@@ -109,3 +108,4 @@ class Footer_Widget extends WP_Widget {
 add_action( 'widgets_init', function(){
   register_widget( 'Footer_Widget' );
 });
+?>

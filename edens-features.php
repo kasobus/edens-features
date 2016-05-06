@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: EDENS Features
- * Version: 1.0
+ * Version: 1.2
  * Plugin URI: http://www.hughlashbrooke.com/
  * Description: This plugin is a feature set for the EDENS Center Theme.
  * Author: Hugh Lashbrooke

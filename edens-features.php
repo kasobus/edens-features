@@ -2,18 +2,21 @@
 /*
  * Plugin Name: EDENS Features
  * Version: 1.2
- * Plugin URI: http://www.hughlashbrooke.com/
+ * Plugin URI: http://www.EDENS.com/
  * Description: This plugin is a feature set for the EDENS Center Theme.
- * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
+ * Author: Kyle Sobus
+ * Author URI: http://www.kylesobus.com/
  * Requires at least: 4.0
  * Tested up to: 4.0
  *
  * Text Domain: edens-features
  * Domain Path: /lang/
  *
+	* Bitbucket Plugin URI: https://bitbucket.org/ksobus/edens-materialsage
+	* Bitbucket Branch:    master
+	
  * @package WordPress
- * @author Hugh Lashbrooke
+ * @author Kyle Sobus
  * @since 1.0.0
  */
 

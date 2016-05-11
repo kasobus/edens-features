@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Load plugin class files
 require_once( 'includes/class-edens-features.php' );
 require_once( 'includes/class-edens-features-settings.php' );
-require_once( 'includes/kirki/kirki.php' );
+//require_once( 'includes/kirki/kirki.php' );
 require_once( 'includes/edens-sma/edens-social-media-aggregator.php' );
 require_once( 'includes/acf-field-date-time-picker/acf-date_time_picker.php' );
 

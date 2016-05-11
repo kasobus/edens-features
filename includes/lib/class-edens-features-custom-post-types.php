@@ -33,7 +33,7 @@ function custom_post_type_retailer() {
 		'filter_items_list'     => 'Filter Retailers list',
 	);
 	$args = array(
-		'label'                 => 'Retailer',
+		'label'                 => 'Retailers',
 		'description'           => 'All retailers currently leasing at the center.',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', ),

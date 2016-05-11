@@ -8,10 +8,17 @@
  * Author URI: http://www.kylesobus.com
  * Requires at least: 4.0
  * Tested up to: 4.0
+ *
+ * Text Domain: edens-features
+ * Domain Path: /lang/
+ *
+	* Bitbucket Plugin URI: https://bitbucket.org/ksobus/edens-materialsage
+	* Bitbucket Branch:    master
+	
  * @package WordPress
  * @author Kyle Sobus
  * @since 1.0.0
- */
+	*/
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 

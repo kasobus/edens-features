@@ -29,7 +29,7 @@ class Footer_Widget extends WP_Widget {
    */
   function __construct() {
     parent::__construct(
-      'Footer_Widget', // Base ID
+      'footer_widget', // Base ID
       __('Footer Content', 'text_domain'), // Name
       array( 'description' => __( 'All footer content.', 'text_domain' ), ) // Args
     );
@@ -48,15 +48,23 @@ class Footer_Widget extends WP_Widget {
 		echo '<div class="container">';
     echo '<div class="row">';
 	 echo '<div class="col s12 m5 push-m7">';
+		if(!empty(get_field('edens_website ', 'widget_' . $args['widget_id']))){
 		echo get_field('edens_website ', 'widget_' . $args['widget_id']);
+					}
 		echo '&nbsp;/&nbsp;';
+		if(!empty(get_field('privacy_policy', 'widget_' . $args['widget_id']))){
 		echo get_field('privacy_policy', 'widget_' . $args['widget_id']);
+		}
 		echo '</div>';
 		echo '<div class="col s12 m7 pull-m5">';
+		if(!empty(get_field('copyright_title', 'widget_' . $args['widget_id']))){
 		echo get_field('copyright_title', 'widget_' . $args['widget_id']);
 		echo '</br>';
+		}
+		if(!empty(get_field('address', 'widget_' . $args['widget_id']))){
 		$address = get_field('address', 'widget_' . $args['widget_id']);
-		echo $address['address'];
+			echo $address['address'];
+		}
 		echo '</div>';
 	  echo '</div>';
 	 echo '</div>';
@@ -106,6 +114,6 @@ class Footer_Widget extends WP_Widget {
 
 // register Footer_Widget widget
 add_action( 'widgets_init', function(){
-  register_widget( 'Footer_Widget' );
+  register_widget( 'footer_widget' );
 });
 ?>

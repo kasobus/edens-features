@@ -155,7 +155,7 @@ function mytheme_kirki_fields( $fields ) {
     return $fields;
 
 }
-add_filter( 'kirki/fields', 'mytheme_kirki_fields' );
+//add_filter( 'kirki/fields', 'mytheme_kirki_fields' );
 
 
 
@@ -763,7 +763,7 @@ acf_add_local_field_group(array (
 							'default_value' => array (
 							),
 							'layout' => 'horizontal',
-							'toggle' => 1,
+							'toggle' => 0,
 						),
 						array (
 							'key' => 'field_553501f369415',
@@ -2165,4 +2165,4 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-endif;
+endif;?>

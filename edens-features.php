@@ -12,7 +12,7 @@
  * Text Domain: edens-features
  * Domain Path: /lang/
  *
-	* Bitbucket Plugin URI: https://bitbucket.org/ksobus/edens-materialsage
+	* Bitbucket Plugin URI: https://bitbucket.org/ksobus/edens-features
 	* Bitbucket Branch:    master
 	
  * @package WordPress

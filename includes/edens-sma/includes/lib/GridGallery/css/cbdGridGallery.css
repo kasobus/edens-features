@@ -1,0 +1,563 @@
+
+ .grid figcaption {
+     border-bottom: solid 2px #999999;
+ }
+ 
+ /* Social Media Aggregator - SMA - STYLES */
+  #grid-gallery a,
+ #grid-gallery figure,
+ #grid-gallery span {
+     -webkit-transition: all 350ms;
+     -moz-transition: all 350ms;
+     -o-transition: all 350ms;
+     transition: all 350ms;
+ }
+ .grid-gallery figcaption>i {
+     float: left;
+     padding: 2px 5px 2px 2px;
+ }
+ .grid-gallery .grid-wrap figure {
+     background-position: center;
+     background-size: cover;
+     background-clip: content-box;
+     list-style: none;
+     overflow: hidden;
+ }
+ .latest-buzz,
+ .event-gallery {
+     position: relative;
+     height: 348px;
+ }
+ .latest-buzz:before,
+ .event-gallery:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     width: 66px;
+     height: 66px;
+     margin: auto;
+     background-image: url('../img/social-feed/loader-icon.gif');
+     background-size: 100%;
+ }
+ .latest-buzz.on,
+ .event-gallery.on {
+     height: auto;
+ }
+ .latest-buzz.on:before,
+ .event-gallery.on:before {
+     opacity: 0;
+ }
+ .latest-buzz .overlay,
+ .event-gallery .overlay {
+     position: absolute;
+     top: 0px;
+     bottom: 0;
+     width: 100%;
+     padding: 15px;
+     color: #fff;
+     font-style: normal;
+ }
+ .latest-buzz figure.image-text .overlay,
+ .latest-buzz figure.image .overlay,
+ .event-gallery figure.image-text .overlay,
+ .event-gallery figure.image .overlay {
+     opacity: 0;
+ }
+ .latest-buzz .center-vertical,
+ .event-gallery .center-vertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+     font-size: 18px;
+ }
+ span.break-word {
+     -ms-word-break: break-all;
+     word-break: break-all;
+     word-break: break-word;
+     -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+     hyphens: auto;
+ }
+ /* GRID - SLIDESHOW GALLERY */
+ 
+ @font-face {
+     font-family: 'fontawesome';
+     src: url('./fonts/fontawesome/fontawesome.eot?-e43dk9');
+     src: url('./fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'), url('./fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'), url('./fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'), url('./fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');
+     font-weight: normal;
+     font-style: normal;
+ }
+ /* Made with http://icomoon.io/app */
+ /* General style */
+ 
+ .grid-gallery ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+ }
+ .grid-gallery figure {
+     margin: 0;
+ }
+ .grid-gallery figure img {
+     display: block;
+     width: 100%;
+ }
+ .grid-gallery figcaption h3 {
+     margin: 0;
+     padding: 0 0 0.5em;
+ }
+ .grid-gallery figcaption i {
+     padding-right: .5em;
+ }
+ .grid-gallery figcaption p {
+     margin: 0;
+ }
+ /* Grid style */
+ 
+ .grid-wrap {
+     max-width: 69em;
+     margin: 0 auto;
+ }
+ .grid {
+     margin: 0 auto;
+ }
+ .grid li {
+     width: 25%;
+     float: left;
+     cursor: pointer;
+ }
+ figure ul.grid:first-child {
+     height: 0px!important;
+ }
+ .grid figure {
+     margin: 0px 15px 30px 15px;
+     -webkit-transition: opacity 0.2s;
+     transition: opacity 0.2s;
+     position: relative;
+ }
+ .grid li:hover .overlay {
+     background: #666666;
+ }
+ .grid figcaption {
+     background: rgb(240, 240, 240);
+     background: rgba(255, 255, 255, 0.75);
+     padding: 10px;
+     position: absolute;
+ }
+ .grid figcaption {
+     bottom: 0;
+     width: 100%;
+ }
+ /* Slideshow style */
+ 
+ .slideshow {
+     position: fixed;
+     background: rgba(15, 15, 15, );
+     background: rgba(0, 0, 0, 0.6);
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     z-index: 500;
+     opacity: 0;
+     visibility: hidden;
+     overflow: hidden;
+     -webkit-perspective: 1000px;
+     perspective: 1000px;
+     -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+     transition: opacity 0.5s, visibility 0s 0.5s;
+ }
+ .slideshow-open .slideshow {
+     opacity: 1;
+     visibility: visible;
+     -webkit-transition: opacity 0.5s;
+     transition: opacity 0.5s;
+ }
+ .slideshow ul {
+     width: 100%;
+     height: 100%;
+     -webkit-transform-style: preserve-3d;
+     transform-style: preserve-3d;
+     -webkit-transform: translate3d(0, 0, 150px);
+     transform: translate3d(0, 0, 150px);
+     -webkit-transition: -webkit-transform 0.5s;
+     transition: transform 0.5s;
+ }
+ .slideshow ul.animatable li {
+     -webkit-transition: -webkit-transform 0.5s;
+     transition: transform 0.5s;
+ }
+ .slideshow-open .slideshow ul {
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+ }
+ .slideshow li {
+     width: 660px;
+     height: 560px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     margin: -280px 0 0 -330px;
+     visibility: hidden;
+ }
+ .slideshow li.show {
+     visibility: visible;
+ }
+ .slideshow li:after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background: rgba(255, 255, 255, 0.8);
+     -webkit-transition: opacity 0.3s;
+     transition: opacity 0.3s;
+ }
+ .slideshow li.current:after {
+     visibility: hidden;
+     opacity: 0;
+     -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+     transition: opacity 0.3s, visibility 0s 0.3s;
+ }
+ .slideshow figure {
+     width: 100%;
+     height: 100%;
+     background: #fff;
+     border: 50px solid #fff;
+     overflow: hidden;
+ }
+ .slideshow figcaption {
+     padding-bottom: 20px;
+ }
+ .slideshow figcaption h3 {
+     font-weight: 300;
+     font-size: 200%;
+ }
+ /* Navigation */
+ 
+ .slideshow nav span {
+     position: fixed;
+     z-index: 1000;
+     color: #59656c;
+     text-align: center;
+     padding: 3%;
+     cursor: pointer;
+     font-size: 2.2em;
+ }
+ .slideshow nav span.nav-prev,
+ .slideshow nav span.nav-next {
+     top: 50%;
+     -webkit-transform: translateY(-50%);
+     transform: translateY(-50%);
+     padding: 25% 3%;
+     z-index: 1100;
+ }
+ .slideshow nav span.nav-next {
+     right: 0;
+ }
+ .slideshow nav span.nav-close {
+     top: 0;
+     right: 0;
+     padding: 0.5em 1em;
+     color: #31373a;
+     width: 100%;
+     height: 100%;
+ }
+ .icon:before,
+ .icon:after {
+     font-family: 'fontawesome';
+     speak: none;
+     font-style: normal;
+     font-weight: normal;
+     font-variant: normal;
+     text-transform: none;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
+ span.nav-prev:before {
+     content: "\e601";
+ }
+ span.nav-next:before {
+     content: "\e600";
+ }
+ span.nav-close:before {
+     content: "\e602";
+     width: 50px;
+     float: right;
+ }
+ /* Info on arrow key navigation */
+ 
+ .info-keys {
+     position: fixed;
+     top: 10px;
+     left: 10px;
+     width: 60px;
+     font-size: 8px;
+     padding-top: 20px;
+     text-transform: uppercase;
+     color: #fff;
+     letter-spacing: 1px;
+     text-align: center;
+ }
+ .info-keys:before,
+ .info-keys:after {
+     position: absolute;
+     top: 0;
+     width: 16px;
+     height: 16px;
+     border: 1px solid #fff;
+     text-align: center;
+     line-height: 14px;
+     font-size: 12px;
+ }
+ .info-keys:before {
+     left: 10px;
+     content: "\e603";
+ }
+ .info-keys:after {
+     right: 10px;
+     content: "\e604";
+ }
+ /* Example media queries (reduce number of columns and change slideshow layout) */
+ 
+ @media screen and (min-width: 60em) {
+     .slideshow li.current {
+         z-index: 1200;
+     }
+ }
+ @media screen and (max-width: 60em) {
+     /* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
+     
+     .grid li {
+         width: 33.3%;
+     }
+     .slideshow li {
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         margin: 0;
+     }
+     .slideshow li figure img {
+         width: auto;
+         margin: 0 auto;
+         max-width: 100%;
+     }
+     .slideshow nav span,
+     .slideshow nav span.nav-close {
+         font-size: 1.8em;
+         padding: 0.3em;
+     }
+     .info-keys {
+         display: none;
+     }
+ }
+ @media screen and (max-width: 35em) {
+     .grid li {
+         width: 50%;
+     }
+ }
+ @media screen and (max-width: 24em) {
+     .grid li {
+         width: 100%;
+     }
+ }
+ /* CENTER OBJECT - Vertical and Horizontal */
+ 
+ .center {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+    -ms-transform: rotate(-50%, -50%); /* IE 9 */
+    -webkit-transform: rotate(-50%, -50%); /* Chrome, Safari, Opera */
+ }
+ /* FONTASTIC */
+ 
+ @charset "UTF-8";
+ @font-face {
+     font-family: "icons";
+     src: url("./css/fonts/icons.eot");
+     src: url("./css/fonts/icons.eot?#iefix") format("embedded-opentype"), url("./css/fonts/icons.woff") format("woff"), url("./css/fonts/icons.ttf") format("truetype"), url("./css/fonts/icons.svg#icons") format("svg");
+     font-weight: normal;
+     font-style: normal;
+ }
+ [data-icon]:before {
+     font-family: "icons" !important;
+     content: attr(data-icon);
+     font-style: normal !important;
+     font-weight: normal !important;
+     font-variant: normal !important;
+     text-transform: none !important;
+     speak: none;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
+ [class^="icon-"]:before,
+ [class*=" icon-"]:before {
+     font-family: "icons" !important;
+     font-style: normal !important;
+     font-weight: normal !important;
+     font-variant: normal !important;
+     text-transform: none !important;
+     speak: none;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
+ .icon-right:before {
+     content: "\61";
+ }
+ .icon-left:before {
+     content: "\62";
+ }
+ .icon-calendar:before {
+     content: "\63";
+ }
+ .icon-reminder:before {
+     content: "\64";
+ }
+ .icon-facebook:before {
+     content: "\66";
+ }
+ .icon-facebook-square:before {
+     content: "\67";
+ }
+ .icon-filter:before {
+     content: "\68";
+ }
+ .icon-google-plus:before {
+     content: "\69";
+ }
+ .icon-google-plus-square:before {
+     content: "\6a";
+ }
+ .icon-linkedin:before {
+     content: "\6b";
+ }
+ .icon-linkedin-square:before {
+     content: "\6c";
+ }
+ .icon-minus-circle-dark:before {
+     content: "\6d";
+ }
+ .icon-minus:before {
+     content: "\6e";
+ }
+ .icon-phone:before {
+     content: "\6f";
+ }
+ .icon-phone-square:before {
+     content: "\70";
+ }
+ .icon-pencil-square-o:before {
+     content: "\71";
+ }
+ .icon-plus-circle:before {
+     content: "\72";
+ }
+ .icon-plus:before {
+     content: "\73";
+ }
+ .icon-plus-square-dark:before {
+     content: "\74";
+ }
+ .icon-minus-square-dark:before {
+     content: "\75";
+ }
+ .icon-plus-square-light:before {
+     content: "\76";
+ }
+ .icon-minus-square-light:before {
+     content: "\77";
+ }
+ .icon-pinterest:before {
+     content: "\78";
+ }
+ .icon-pinterest-square:before {
+     content: "\79";
+ }
+ .icon-pinterest-circle:before {
+     content: "\7a";
+ }
+ .icon-search-plus:before {
+     content: "\41";
+ }
+ .icon-search-minus:before {
+     content: "\42";
+ }
+ .icon-search:before {
+     content: "\43";
+ }
+ .icon-share-1:before {
+     content: "\44";
+ }
+ .icon-share-square:before {
+     content: "\45";
+ }
+ .icon-tumblr:before {
+     content: "\46";
+ }
+ .icon-tumblr-square:before {
+     content: "\47";
+ }
+ .icon-vimeo:before {
+     content: "\48";
+ }
+ .icon-vimeo-square:before {
+     content: "\49";
+ }
+ .icon-youtube:before {
+     content: "\4a";
+ }
+ .icon-youtube-square:before {
+     content: "\4b";
+ }
+ .icon-yelp:before {
+     content: "\4c";
+ }
+ .icon-twitter:before {
+     content: "\4d";
+ }
+ .icon-twitter-square:before {
+     content: "\4e";
+ }
+ .icon-map:before {
+     content: "\4f";
+ }
+ .icon-map-marker:before {
+     content: "\50";
+ }
+ .icon-clock:before {
+     content: "\51";
+ }
+ .icon-email-mail-streamline:before {
+     content: "\52";
+ }
+ .icon-screen-full:before {
+     content: "\65";
+ }
+ .icon-screen-normal:before {
+     content: "\53";
+ }
+ .icon-share:before {
+     content: "\54";
+ }
+ .icon-close:before {
+     content: "\55";
+ }
+ .icon-info-circle:before {
+     content: "\56";
+ }
+ .icon-info:before {
+     content: "\57";
+ }

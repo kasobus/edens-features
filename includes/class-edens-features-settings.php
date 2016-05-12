@@ -111,7 +111,7 @@ class EDENS_Features_Settings {
 			'title'					=> __( 'Standard', 'edens-features' ),
 			'description'			=> __( 'These are fairly standard form input fields.', 'edens-features' ),
 			'fields'				=> array(
-				array(
+				/*array(
 					'id' 			=> 'text_field',
 					'label'			=> __( 'Some Text' , 'edens-features' ),
 					'description'	=> __( 'This is a standard text field.', 'edens-features' ),
@@ -173,9 +173,23 @@ class EDENS_Features_Settings {
 					'type'			=> 'checkbox_multi',
 					'options'		=> array( 'square' => 'Square', 'circle' => 'Circle', 'rectangle' => 'Rectangle', 'triangle' => 'Triangle' ),
 					'default'		=> array( 'circle', 'triangle' )
+				),*/
+				array(
+					'id' 			=> 'grid-gallery-checkbox',
+					'label'			=> __( 'Enable Grid Gallery', 'edens-features' ),
+					'description'	=> __( '', 'edens-features' ),
+					'type'			=> 'checkbox',
+					'default'		=> ''
+				),   
+                array(
+					'id' 			=> 'color_picker',
+					'label'			=> __( 'Overlay Color', 'edens-features' ),
+					'description'	=> __( 'This is the background color when hovering over a social media post.', 'edens-features' ),
+					'type'			=> 'color',
+					'default'		=> 'rgba(99, 135, 156, 0.92)'
 				)
 			)
-		);
+		);/*
 
 		$settings['extra'] = array(
 			'title'					=> __( 'Extra', 'edens-features' ),
@@ -213,7 +227,7 @@ class EDENS_Features_Settings {
 					'default'		=> array( 'linux' )
 				)
 			)
-		);
+		);*/
 
 		$settings = apply_filters( $this->parent->_token . '_settings_fields', $settings );
 

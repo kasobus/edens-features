@@ -18,14 +18,12 @@
  * @author Kyle Sobus
  * @since 1.0.0
 	*/
-print_r(get_site_transient('update_plugins'));
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Load plugin class files
 require_once( 'includes/class-edens-features.php' );
 require_once( 'includes/class-edens-features-settings.php' );
 //require_once( 'includes/kirki/kirki.php' );
-require_once( 'includes/edens-sma/edens-social-media-aggregator.php' );
 require_once( 'includes/acf-field-date-time-picker/acf-date_time_picker.php' );
 
 // Load ACF Plugin
@@ -49,6 +47,7 @@ require_once( 'includes/lib/class-edens-features-taxonomy.php' );
 require_once( 'includes/lib/class-edens-features-ACF.php' );
 require_once( 'includes/lib/class-edens-features-extra-options.php' );
 require_once( 'includes/lib/class-edens-features-custom-post-types.php' );
+require_once( 'includes/lib/class-edens-features-social-media-aggregator-sma.php' );
 /**
  * Returns the main instance of EDENS_Features to prevent the need to use globals.
  *

@@ -14,12 +14,11 @@
  *
 	* Bitbucket Plugin URI: https://bitbucket.org/ksobus/edens-features
 	* Bitbucket Branch:    master
-	
  * @package WordPress
  * @author Kyle Sobus
  * @since 1.0.0
 	*/
-
+print_r(get_site_transient('update_plugins'));
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Load plugin class files
@@ -43,7 +42,6 @@ require_once( 'includes/acf-field-date-time-picker/acf-date_time_picker.php' );
 	add_filter('acf/settings/show_admin', '__return_false'); // 3. Hide ACF field group menu item
 	include_once( plugin_dir_path( __FILE__ ).'includes/acf/acf.php' ); // 4. Include ACF
 
-
 // Load plugin libraries
 require_once( 'includes/lib/class-edens-features-admin-api.php' );
 require_once( 'includes/lib/class-edens-features-post-type.php' );
@@ -51,7 +49,6 @@ require_once( 'includes/lib/class-edens-features-taxonomy.php' );
 require_once( 'includes/lib/class-edens-features-ACF.php' );
 require_once( 'includes/lib/class-edens-features-extra-options.php' );
 require_once( 'includes/lib/class-edens-features-custom-post-types.php' );
-
 /**
  * Returns the main instance of EDENS_Features to prevent the need to use globals.
  *
@@ -64,8 +61,6 @@ function EDENS_Features () {
 	if ( is_null( $instance->settings ) ) {
 		$instance->settings = EDENS_Features_Settings::instance( $instance );
 	}
-
 	return $instance;
 }
-
 EDENS_Features();

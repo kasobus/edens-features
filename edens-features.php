@@ -37,7 +37,7 @@ require_once( 'includes/acf-field-date-time-picker/acf-date_time_picker.php' );
 					$dir = plugin_dir_url( __FILE__ ).'includes/acf/';// update path
 					return $dir; // return
 	}
-	add_filter('acf/settings/show_admin', '__return_false'); // 3. Hide ACF field group menu item
+	//add_filter('acf/settings/show_admin', '__return_false'); // 3. Hide ACF field group menu item
 	include_once( plugin_dir_path( __FILE__ ).'includes/acf/acf.php' ); // 4. Include ACF
 
 // Load plugin libraries

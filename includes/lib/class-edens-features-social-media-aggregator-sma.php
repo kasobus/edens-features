@@ -53,12 +53,19 @@ function get_sma( $atts ){
 	extract(shortcode_atts(array('id' => ''), $atts));
     // set page id to either the id attr which defaults to one.
     $page_id = $id;
-    $page_data = get_page( $page_id );
-    ob_start();
-    echo '<section class="latest-buzz row retailer" data-postid="'.$post->ID.'" data-layout="retailer"></section>';
-    $sma = ob_get_clean();
-    return $sma;
-}
+    $page_data = get_page( $page_id ); 
+	
+			// data-layout = $layout
+				if(is_single()){
+							$layout = get_post_type(); //Post = Post type
+				} else { 
+				$layout = $post->post_name; //Page = Page slug
+				}
+							ob_start();
+							echo '<section class="latest-buzz row retailer" data-postid="'.$post->ID.'" data-layout="'.$layout.'"></section>';
+							$sma = ob_get_clean();
+							return $sma;
+			}
 add_shortcode( 'get_sma', 'get_sma' );
 
 
@@ -84,28 +91,32 @@ function sma_grabJson($sma_query){
 function sma_createSocialMedia($endpoint, $sma_page_type){
 	$returned_json = sma_grabJson( $endpoint );
 	if( !empty( $returned_json ) && $returned_json != null ){
-        
-  
     $color = get_option('sma_color_picker');?>
-<style>      
-.grid li:hover .overlay {
-     background: <?php echo $color;?>;
- }
- .latest-buzz figure:hover .overlay,
- .event-gallery figure:hover .overlay {
-     background: <?php echo $color;?>;
-     opacity: 1;
- }
- 
- .latest-buzz .grid-gallery>.grid-wrap figure {
-     background-color: <?php echo $color;?>;
- }
-    </style>   
-     <?php 
-		$total_media_posts = 3;
-		if( $sma_page_type == 'home' ){
-					'<h1>What&rsquo;s The Latest Buzz?</h1>';
+	<style>
+		.grid li:hover .overlay {
+			background: <?php echo $color;
+			?>;
 		}
+		
+		.latest-buzz figure:hover .overlay,
+		.event-gallery figure:hover .overlay {
+			background: <?php echo $color;
+			?>;
+			opacity: 1;
+		}
+		
+		.latest-buzz .grid-gallery>.grid-wrap figure {
+			background-color: <?php echo $color;
+			?>;
+		}
+	</style>
+	<?php 
+		$total_media_posts = 3; //Start count at 0. Ex. 0,1,2,3
+	 // Override how many social posts.
+		$id = $_GET["post_id"];
+	 if(get_field('social_media_posts',$id)) {
+		$total_media_posts = get_field('social_media_posts', $id) - 1;
+	 }
 	 	echo '<div id="grid-gallery" class="grid-gallery">'.
 		'<section class="grid-wrap">'.
 		'<ul class="grid">'.

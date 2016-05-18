@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Load plugin class files
 require_once( 'includes/class-edens-features.php' );
 require_once( 'includes/class-edens-features-settings.php' );
-require_once( 'includes/acf-field-date-time-picker/acf-date_time_picker.php' );
+//require_once( 'includes/acf-field-date-time-picker/acf-date_time_picker.php' );
 
 // Load ACF Plugin
 	add_filter('acf/settings/path', 'my_acf_settings_path'); // 1. Customize ACF path
@@ -37,7 +37,7 @@ require_once( 'includes/acf-field-date-time-picker/acf-date_time_picker.php' );
 					return $dir; // return
 	}
 	//add_filter('acf/settings/show_admin', '__return_false'); // 3. Hide ACF field group menu item
-	include_once( plugin_dir_path( __FILE__ ).'includes/acf/acf.php' ); // 4. Include ACF
+	//include_once( plugin_dir_path( __FILE__ ).'includes/acf/acf.php' ); // 4. Include ACF
 
 // Load plugin libraries
 require_once( 'includes/lib/class-edens-features-admin-api.php' );

@@ -2432,7 +2432,7 @@ acf_add_local_field_group(array (
 			'name' => 'cards',
 			'type' => 'flexible_content',
 			'instructions' => '',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
 				'width' => '',
@@ -2455,7 +2455,7 @@ acf_add_local_field_group(array (
 							'name' => 'card_title',
 							'type' => 'text',
 							'instructions' => '',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array (
 								'width' => 50,
@@ -2476,7 +2476,7 @@ acf_add_local_field_group(array (
 							'name' => 'card_image',
 							'type' => 'image',
 							'instructions' => '',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array (
 								'width' => 50,
@@ -2500,7 +2500,7 @@ acf_add_local_field_group(array (
 							'name' => 'card_caption',
 							'type' => 'textarea',
 							'instructions' => '',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array (
 								'width' => '',
@@ -2521,7 +2521,7 @@ acf_add_local_field_group(array (
 							'name' => 'card_link_type',
 							'type' => 'radio',
 							'instructions' => '',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => 0,
 							'wrapper' => array (
 								'width' => 50,
@@ -2543,7 +2543,7 @@ acf_add_local_field_group(array (
 							'name' => 'card_link',
 							'type' => 'url',
 							'instructions' => '',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => array (
 								array (
 									array (
@@ -2567,7 +2567,7 @@ acf_add_local_field_group(array (
 							'name' => 'card_link',
 							'type' => 'page_link',
 							'instructions' => '',
-							'required' => 0,
+							'required' => 1,
 							'conditional_logic' => array (
 								array (
 									array (
@@ -2618,6 +2618,5 @@ acf_add_local_field_group(array (
 	'active' => 1,
 	'description' => '',
 ));
-
 endif;
 endif;?>

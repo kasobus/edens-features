@@ -12,8 +12,8 @@
  * Text Domain: edens-features
  * Domain Path: /lang/
  *
-	* Bitbucket Plugin URI: https://bitbucket.org/ksobus/edens-features
-	* Bitbucket Branch:    master
+	* GitHub Plugin URI: https://github.com/kasobus/edens-features
+	* Github Branch:    master
  * @package WordPress
  * @author Kyle Sobus
  * @since 1.0.0

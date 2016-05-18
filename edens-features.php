@@ -7,7 +7,7 @@
  * Author: Kyle Sobus
  * Author URI: http://www.kylesobus.com
  * Requires at least: 4.0
- * Tested up to: 4.0
+ * Tested up to: 6.0
  *
  * Text Domain: edens-features
  * Domain Path: /lang/
@@ -23,7 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Load plugin class files
 require_once( 'includes/class-edens-features.php' );
 require_once( 'includes/class-edens-features-settings.php' );
-//require_once( 'includes/kirki/kirki.php' );
 require_once( 'includes/acf-field-date-time-picker/acf-date_time_picker.php' );
 
 // Load ACF Plugin

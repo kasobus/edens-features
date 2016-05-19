@@ -2,7 +2,7 @@
 /*
  * Plugin Name: EDENS Features
  * Plugin URI: http://www.EDENS.com/
- * Version: 1.3.5
+ * Version: 1.3.6
  * Description: This plugin is a feature set for the EDENS Center Theme.
  * Author: Kyle Sobus
  * Author URI: http://www.kylesobus.com

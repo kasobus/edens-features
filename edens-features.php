@@ -2,7 +2,7 @@
 /*
  * Plugin Name: EDENS Features
  * Plugin URI: http://www.EDENS.com/
- * Version: 1.3.4
+ * Version: 1.3.5
  * Description: This plugin is a feature set for the EDENS Center Theme.
  * Author: Kyle Sobus
  * Author URI: http://www.kylesobus.com
@@ -12,8 +12,6 @@
  * Text Domain: edens-features
  * Domain Path: /lang/
  *
-	* Bitbucket Plugin URI: https://bitbucket.org/ksobus/edens-features
-	* Bitbucket Branch:    master
  * @package WordPress
  * @author Kyle Sobus
  * @since 1.0.0
